@@ -19,6 +19,9 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->post('/register', 'UserController@register');
+$router->post('/login', 'UserController@login');
+
 // $router->get('/webScraping', 'webScrapingController@index');
 
 $router->get('/key', function() {
