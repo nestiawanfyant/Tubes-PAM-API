@@ -30,7 +30,7 @@ class CreateTblPenitipanBarang extends Migration
             $table->string('noSeriBarang');  
             $table->date('batasPenitipan');
             $table->string('catatan');
-            $table->enum('status', ['prose', 'diTolak', 'diTerima'])->default('proses');
+            $table->enum('status', ['proses', 'diTolak', 'diTerima'])->default('proses');
             $table->boolean('confirmed')->default(false);
             $table->timestamps();
             $table->softDeletes();
