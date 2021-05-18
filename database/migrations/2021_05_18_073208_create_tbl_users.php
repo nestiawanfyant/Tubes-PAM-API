@@ -18,6 +18,7 @@ class CreateTblUsers extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->enum('role', ['user', 'admin'])->default('user');
             $table->string('noTelfon', 20);
             $table->string('alamat')->nullable();
             $table->string('provinsi')->nullable();
