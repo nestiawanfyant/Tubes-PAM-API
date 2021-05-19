@@ -19,7 +19,7 @@ class CreateTblPenitipanKendaraan extends Migration
             $table->string('namaPemilik');
             $table->string('NIKPemiik');
             $table->string('alamatRumah');
-            $table->integer('noTelfon');
+            $table->integer('noTelfon', 20);
             $table->string('provinsi');
             $table->string('kota');
             $table->string('kodePos');
