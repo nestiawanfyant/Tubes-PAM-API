@@ -27,6 +27,7 @@ class CreateTblPenitipanKendaraan extends Migration
             $table->string('merekKendaraan');   
             $table->string('warnaKendaraan');   
             $table->string('typeKendaraan');
+            $table->string('tahunKendaraan');
             $table->string('nomorRangkaKendaraan');  
             $table->string('nomotMesinKendaraan');
             $table->string('nomotPlatKendaraan');

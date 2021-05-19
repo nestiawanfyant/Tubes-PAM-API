@@ -53,6 +53,15 @@ class UserController extends Controller
         $noTelp     = $input->input('noTelp');
         $pass       = Hash::make($input->input('password'));
 
+        $user = User::where('email', $email)->first();
+
+        if($user){
+            return response()->json([
+                'status'    => false,
+                'message'   => "Email Sudah tersedia".
+            ]);
+        }
+
         $register               = New User;
         $register->name         = $name;
         $register->email        = $email;
