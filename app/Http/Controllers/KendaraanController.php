@@ -34,7 +34,7 @@ class KendaraanController extends Controller
         $kendaraan                          = new Kendaraan; 
         $kendaraan->user_id                 = $input->input('user_id');
         $kendaraan->namaPemilik             = $input->input('namaPemilik');
-        $kendaraan->NIKPemiik               = $input->input('NIKPemilik');
+        $kendaraan->NIKPemilik              = $input->input('NIKPemilik');
         $kendaraan->alamatRumah             = $input->input('alamatRumah');
         $kendaraan->noTelfon                = $input->input('noTelfon');
         $kendaraan->provinsi                = $input->input('provinsi');

@@ -17,7 +17,7 @@ class CreateTblPenitipanKendaraan extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('namaPemilik');
-            // $table->string('NIKPemilik');
+            $table->string('NIKPemilik');
             $table->string('alamatRumah');
             $table->string('noTelfon', 20);
             $table->string('provinsi');
