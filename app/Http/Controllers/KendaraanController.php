@@ -10,9 +10,47 @@ use App\Models\Kendaraan;
 class KendaraanController extends Controller
 {
 
+    public function getAllKendaraan()
+    {
+        $data = Kendaraan::orderBy('created_at', 'DESC')->get();
+
+        if($data){
+            return response()->json([
+                'status'    => true,
+                'message'   => 'Berhasil Mengambil Data',
+                'data'      => $data,
+            ], 201);
+        } else {
+            return response()->json([
+                'status'    => false,
+                'message'   => 'Gagal Mengambil Data',
+                'data'      => ""
+            ], 400);
+        }
+    }
+
+    public function getKendaraanbyID($id)
+    {
+        $data = Kendaraan::find($id);
+        
+        if($data){
+            return response()->json([
+                'status'    => true,
+                'message'   => 'Berhasil Mengambil Data',
+                'data'      => $data,
+            ], 201);
+        } else {
+            return response()->json([
+                'status'    => false,
+                'message'   => 'Gagal Mengambil Data',
+                'data'      => ""
+            ], 400);
+        }
+    }
+
     public function getDataPengajuanByUser($user_id)
     {
-        $data = Kendaraan::where('user_id', $user_id)->get();
+        $data = Kendaraan::where('user_id', $user_id)->orderBy('created_at', 'DESC')->get();
 
         if($data){
             return response()->json([
