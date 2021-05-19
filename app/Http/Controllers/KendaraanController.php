@@ -10,7 +10,7 @@ use App\Models\Kendaraan;
 class KendaraanController extends Controller
 {
 
-    public function getDataPengajuanByUser($id)
+    public function getDataPengajuanByUser($user_id)
     {
         $data = Kendaraan::where('user_id', $user_id)->get();
 

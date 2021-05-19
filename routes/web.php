@@ -24,7 +24,7 @@ $router->post('/login', 'UserController@login');
 
 
 $router->post('/api/post/kendaraan',        'KendaraanController@insertPengajuan');
-$router->get('/api/get/kendaraan/{$id}',    'KendaraanController@getDataPengajuanByUser');
+$router->get('/api/get/kendaraan/{user_id}',    'KendaraanController@getDataPengajuanByUser');
 
 
 $router->get('/key', function() {
