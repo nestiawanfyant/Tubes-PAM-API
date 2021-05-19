@@ -50,8 +50,6 @@ class KendaraanController extends Controller
         $kendaraan->nomotPlatKendaraan      = $input->input('nomotPlatKendaraan');
         $kendaraan->batasPenitipan          = $input->input('batasPenitipan');
         $kendaraan->catatan                 = $input->input('catatan');
-        $kendaraan->status                  = $input->input('status');
-        $kendaraan->confirmed               = $input->input('confirmed');
 
         if($kendaraan->save()){
             return response()->json([
