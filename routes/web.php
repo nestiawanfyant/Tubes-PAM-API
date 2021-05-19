@@ -22,7 +22,10 @@ $router->get('/', function () use ($router) {
 $router->post('/register', 'UserController@register');
 $router->post('/login', 'UserController@login');
 
-// $router->get('/webScraping', 'webScrapingController@index');
+
+$router->post('/api/post/kendaraan',        'KendaraanController@insertPengajuan');
+$router->get('/api/get/kendaraan/{$id}',    'KendaraanController@getDataPengajuanByUser');
+
 
 $router->get('/key', function() {
     return \Illuminate\Support\Str::random(32);
