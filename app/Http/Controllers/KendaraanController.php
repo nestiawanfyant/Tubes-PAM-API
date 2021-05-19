@@ -29,6 +29,12 @@ class KendaraanController extends Controller
         }
     }
 
+    public function statusAcc(Request $input)
+    {
+        $idKendaraan = $input->input('idKendaraan');
+        $getData = Kendaraan::find($idKendaraan);
+    }
+
     public function getKendaraanbyID($id)
     {
         $data = Kendaraan::find($id);
