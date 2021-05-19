@@ -24,7 +24,7 @@ class KendaraanController extends Controller
             return response()->json([
                 'status'    => false,
                 'message'   => 'Gagal Mengambil Data',
-                'data'      => ,
+                'data'      => ""
             ], 400);
         }
     }
