@@ -58,7 +58,7 @@ class UserController extends Controller
         if($user){
             return response()->json([
                 'status'    => false,
-                'message'   => "Email Sudah tersedia".
+                'message'   => "Email Sudah tersedia"
             ]);
         }
 
